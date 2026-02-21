@@ -1,0 +1,353 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"); 
+
+:root {
+    
+    --color-primary: #4a4e69; /* سرمه‌ای تیره برای تأکید */
+    --color-secondary: #9a8c98; /* خاکستری مایل به بنفش ملایم */
+    --color-background-dark: #1e1e2e; /* پس‌زمینه اصلی تیره و شیک */
+    --color-background-light: #f4f4f8; /* پس‌زمینه کارت‌ها و محتوای روشن */
+    --color-text-light: #ffffff;
+    --color-text-dark: #333333;
+    --color-accent: #ff6b6b; /* رنگ تأکیدی (برای دکمه‌ها) */
+    --border-radius: 12px;
+    --box-shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif; 
+    background-color: var(--color-background-dark); 
+    color: var(--color-text-light);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+/* --- استایل Scrollbar --- */
+html::-webkit-scrollbar {
+    width: 10px;
+}
+html::-webkit-scrollbar-track {
+    background-color: var(--color-background-light);
+}
+html::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+}
+
+/* --- Header (هدر) --- */
+#header {
+    background-color: var(--color-background-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50vh;
+    margin: 20px;
+    padding: 15px 30px;
+    box-shadow: var(--box-shadow-soft);
+}
+
+.img-logo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+nav {
+    flex-grow: 1; 
+    text-align: center;
+}
+
+.nav-list {
+    display: flex;
+    gap: 35px;
+    list-style-type: none;
+    justify-content: center;
+    
+}
+
+.nav-list a {
+    color: var(--color-text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.button-contact {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.button-contact:hover {
+    background-color: #334155;
+}
+
+/* --- Main Content (محصولات) --- */
+main {
+    padding: 20px;
+}
+
+
+
+
+.baner{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #6f22d7;
+
+}
+
+.baner:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.mahsolat-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; 
+    margin: 40px 0;
+}
+
+.section-mahsolat {
+    background-color: var(--color-background-light);
+    border-radius: var(--border-radius);
+    width: 100%; 
+    max-width: 350px;
+    color: var(--color-text-dark);
+    padding: 15px;
+    margin: 15px;
+    box-shadow: var(--box-shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.section-mahsolat:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.img-mahsolat {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.matn-aks {
+    padding: 5px 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.div-sefaresh-remat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.price-text {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.sefaresh-btn {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.sefaresh-btn:hover {
+    background-color: #e05c5c;
+}
+
+
+/* --- Footer (فوتر) --- */
+footer {
+    background-color: var(--color-background-light);
+    padding: 40px 20px 10px;
+    margin-top: 30px;
+    color: var(--color-text-dark);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.darbare {
+    flex-basis: 40%; 
+}
+
+.p-footer {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.95em;
+    text-align: justify;
+}
+
+.nav-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.namad-footer {
+    width: 150px;
+    margin: 10px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    
+}
+
+.social-links .a-twt {
+    font-size: 1.5em;
+    color: var(--color-primary);
+    transition: color 0.2s;
+    
+}
+
+.social-links .a-twt:hover {
+    color: var(--color-accent);
+}
+
+.copyright-area {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.copy-write {
+    color: #888;
+    font-size: 0.85em;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .nav-list {
+        gap: 20px;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
+    .darbare {
+        flex-basis: 100%;
+    }
+    .p-footer {
+        text-align: center;
+    }
+    .nav-links a {
+        display: inline-block;
+        margin: 0 10px 5px 10px;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .namad-footer {
+        max-width: 150px;
+    }
+}
+/* موبایل‌ها (کوچکتر از 768px) */
+@media (max-width: 768px) {
+    #header {
+        flex-wrap: wrap;
+        padding: 15px;
+        justify-content: center;
+    }
+
+    .logo-link {
+        order: 1;
+        margin-bottom: 10px;
+    }
+    
+    nav {
+        order: 3; 
+        width: 100%;
+    }
+
+    .button-contact {
+        order: 2;
+    }
+
+    .nav-list {
+        gap: 10px;
+        justify-content: space-around;
+    }
+
+    .nav-list li a {
+        font-size: 0.9em;
+    }
+    
+    .mahsolat-container {
+        gap: 15px;
+    }
+    
+    .section-mahsolat {
+        max-width: 100%;
+    }
+}
